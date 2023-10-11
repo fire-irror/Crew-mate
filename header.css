@@ -32,18 +32,7 @@ nav{
   position: absolute;
   left: 30px;
 }
-#nav3>select {
-  padding: 0 20px;
-  height: 30px;
-  background-color: #1b2035;
-  color: #fff;
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-15px);
-  border: 2px solid #fff;
-  border-radius: 30px;
-}
+
 #nav3>ul {
   display: inline-block;
 }
