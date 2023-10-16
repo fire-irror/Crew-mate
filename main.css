@@ -1,0 +1,21 @@
+    *{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    header{
+        margin: 2%;
+    }
+    .main-banner{
+        padding-top: 1%;
+        width: 100%;
+        height:auto;
+    }
+    .img-container{
+        margin-left: 50px;
+    }
+    .img-card{
+        margin-left: 100px;
+        width: 200px;
+        height: 400px;
+    }
