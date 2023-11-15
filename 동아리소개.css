@@ -136,3 +136,27 @@ nav{
   cursor: pointer; 
   margin: 2%;
 }
+
+h1{
+  margin :5%;
+}
+
+h2{
+  margin: 5%;
+  color: rgb(237, 134, 75);
+}
+
+.주요활동{
+  margin: 5%;
+  
+}  
+
+.project{
+  /* text-decoration:overline; */
+  color: rgb(252, 143, 161);
+}
+
+.content{
+  margin: 5%;
+  font-size: 15px;
+}
