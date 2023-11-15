@@ -8,6 +8,18 @@
     <link href="main.css" rel="stylesheet">
     <link href="intro.css" rel="stylesheet">
 </head>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.9/index.global.min.js'></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'resourceTimelineWeek'
+    });
+    calendar.render();
+  });
+
+</script>
 <header>
     <img src="image/crew mate logo.svg">
 </header>
@@ -22,4 +34,6 @@
         <img class="img-card" src="image/Topper-Logo.svg">
         <img class="img-card" src="image/Dida-Logo.svg">
     </div>
+    
+    <div id='calendar'></div>
 </body>
