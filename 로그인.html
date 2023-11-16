@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 화면</title>
     <link rel="stylesheet" href="Login.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="login-container">
         <h1>로그인</h1>
-        <form method="post" action="/api/login">
+        <form id="registrationForm"method="post" action="/api/login">
             <div class="form-group">
                 <label for="username">아이디</label>
                 <input type="text" id="username" name="username" required>
@@ -19,7 +20,8 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">로그인</button>
-        </form>
+        </form> 
     </div>
+    <script src="serverConn/login.js"></script>
 </body>
 </html>
