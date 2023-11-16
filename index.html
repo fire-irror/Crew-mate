@@ -9,20 +9,26 @@
     <link href="intro.css" rel="stylesheet">
 </head>
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.9/index.global.min.js'></script>
-<script>
 
+<script>
     document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'resourceTimelineWeek'
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        
+      });
+
+      calendar.render();
     });
-    calendar.render();
-    });
+  </script>
 
 </script>
 <header>
     <img src="image/crew mate logo.svg">
-    <li><a href="join.html">로그인</a></li>
+    <nav class="main-nav">
+        <li><a href="로그인.html">로그인</a></li>
+        <li><a href="join.html">회원가입</a></li>
+    </nav>
 </header>
 <body>
     <img class="main-banner" src="image/CPUmainbanner.svg">
@@ -35,7 +41,17 @@
         <img class="img-card" src="image/Topper-Logo.svg">
         <img class="img-card" src="image/Dida-Logo.svg"> 
     </div>
+    <h1 class="today">Today's Schedule</h1>
     <p class="more-schedule"><a href="add_schedule.html">스케줄 보러가기</a>
     <div id='calendar'></div>
     
 </body>
+<style>
+    #calendar {
+      width: 90%;
+      height:2%;
+      padding-top:5%;
+      padding-left: 5%;
+    }
+  </style>
+</html>
