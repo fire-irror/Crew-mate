@@ -19,17 +19,16 @@ body::-webkit-scrollbar-track {
 *{
   margin: 0;
   padding: 0;
-  
 }
 
 ul,ol{
   list-style:none
 }
 
-/* a{
+a{
   text-decoration:none;color:#fff;
   font-size:15px
-} */
+}
 
 nav{
   width:80%;
@@ -43,6 +42,8 @@ nav{
   width: 100%;
   position: relative;
   text-align: center;
+  position: sticky;
+  top: 0;
 }
 #nav3>a {
   line-height: 80px;
@@ -113,6 +114,7 @@ nav{
 
 .content {
   font-size: 18px;
+  margin-top: 0%;
 } 
 
 .con {
@@ -137,26 +139,96 @@ nav{
   margin: 2%;
 }
 
-h1{
-  margin :5%;
+
+.content1{
+  margin: 5%;
+  font-size: 15px;
 }
 
-h2{
+.동아리부원 {
+  display: flex;
+  height: 95px;
+  width: auto;
+  padding: 5%;
+  padding-bottom: 0%;
+  margin-top: 5%;
+}
+
+.동아리부원 >p{
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 2%;
+  padding-top: 1%;
+}
+
+
+
+.부원 {
+  display: flex;
   margin: 5%;
-  color: rgb(237, 134, 75);
+  margin-left: 13%;
+  align-items: center; 
+}
+
+.부원 img {
+  max-width: 300px; 
+  margin-right: 5%; 
+}
+
+.부원-text .name {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.부원-text스트 .major {
+  font-style: italic;
+  color: #555;
+}
+
+.부원-text .details {
+  color: #888;
 }
 
 .주요활동{
   margin: 5%;
-  
-}  
-
-.project{
-  /* text-decoration:overline; */
-  color: rgb(252, 143, 161);
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-.content{
+.주요활동내용{
   margin: 5%;
-  font-size: 15px;
+}
+
+.주요활동내용>p{
+  color: rgb(251, 155, 171);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.활동 {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 1%;
+}
+
+.주요활동내용1>p{
+  color:rgb(0, 100, 137) ;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1%;
+}
+
+.주요활동내용1{
+  margin: 5%;
+}
+
+.주요활동내용2>p{
+  color: orange;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1%;
+}
+
+.주요활동내용2{
+  margin: 5%;
 }
