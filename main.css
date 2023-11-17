@@ -35,13 +35,32 @@ header {
     height:auto;
 }
 .img-container{
+    margin-left: 30px;
     margin-left: 100px;
+
 }
 .img-card{
     margin-left: 70px;
     width: 200px;
     height: 400px;
 }
+
+.more-schedule{
+
+}
+
+.img-card1{
+    margin-left: 70px;
+    width: 160px;
+    height: 380px;
+}
+.img-card2{
+    margin-left: 70px;
+    width: 160px;
+    height: 380px;
+}
+
+
 .more-schedule a {
     text-decoration: none;
     color: #333;
