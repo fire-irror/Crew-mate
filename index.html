@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,52 +7,109 @@
     <title>Document</title>
     <link href="main.css" rel="stylesheet">
     <link href="intro.css" rel="stylesheet">
+    <!-- 수정된 부분: index.js 스크립트 추가 -->
+    <script src="index.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.9/index.global.min.js'></script>
 </head>
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.9/index.global.min.js'></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        
-      });
-
-      calendar.render();
-    });
-  </script>
-
-
-</script>
-<header>
-    <img src="image/crew mate logo.svg">
-    <nav class="main-nav">
-        <li><a href="로그인.html">로그인</a></li>
-        <li><a href="join.html">회원가입</a></li>
-    </nav>
-</header>
 <body>
-    <img class="main-banner" src="image/CPUmainbanner.svg">
+    <header>
+        <img src="image/crew mate logo.svg">
+        <nav class="main-nav">
+            <li><a href="로그인.html">로그인</a></li>
+            <li><a href="join.html">회원가입</a></li>
+        </nav>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+          <a href="동아리소개.html"><img class="main-banner" src="image/maincpu.svg" alt="Image 1"></a>
+        </div>
+        <div class="mySlides">
+          <a href="App동아리소개.html"><img class="main-banner" src="image/mainApp.svg" alt="Image 2"></a>
+        </div>
+        <div class="mySlides">
+          <a href="miven동아리소개.html"><img class="main-banner" src="image/mainmiven.svg" alt="Image 3"></a>
+        </div>
+        <div class="mySlides">
+          <a href="js동아리소개.html"><img class="main-banner" src="image/mainjs.svg" alt="Image 4"></a>
+        </div>
+        <div class="mySlides">
+          <a href="topper동아리소개.html"><img class="main-banner" src="image/maintop.svg" alt="Image 5"></a>
+        </div>
+        <div class="mySlides">
+          <a href="Dida동아리소개.html"><img class="main-banner" src="image/maindida.svg" alt="Image 6"></a>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
 
     <div class="img-container">
         <a href="동아리소개.html"><img class="img-card" src="image/CPU-Logo.svg"></a>
+        <a href="App동아리소개.html"><img class="img-card" src="image/app&meLogo.svg"></a>
+        <a href="miven동아리소개.html"><img class="img-card" src="image/mivenLogo.svg"></a>
         <a href="js동아리소개.html"><img class="img-card" src="image/Js-Logo.svg"></a>
-        <a href="App동아리소개.html"><img class="img-card" src="image/app&meLogo.svg">
-        <a href="miven  동아리소개.html"><img class="img-card" src="image/mivenLogo.svg">
-        <a href="topper동아리소개.html"><img class="img-card2" src="image/Topper-Logo.svg">                    
-        <a href="Dida동아리소개.html"> <img class="img-card1" src="image/dida.svg"> 
+        <a href="topper동아리소개.html"><img class="img-card" src="image/Topper-Logo.svg"></a>                  
+        <a href="Dida동아리소개.html"> <img class="img-card" src="image/dida.svg"></a>
     </div>
+
     <h1 class="today">Today's Schedule</h1>
-    <p class="more-schedule"><a href="add_schedule.html">스케줄 보러가기</a>
+    <p class="more-schedule"><a href="add_schedule.html">스케줄 보러가기</a></p>
     <div id='calendar'></div>
     
-</body>
-<style>
-    #calendar {
-      width: 90%;
-      height:2%;
-      padding-top:5%;
-      padding-left: 5%;
+<script>
+let slideIndex = 0;
+let slideDirection = 1; // 1은 앞으로, -1은 뒤로
+
+function plusSlides(n) {
+    showSlides((slideIndex += n));
+}
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {
+        slideIndex = 1;
     }
-  </style>
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+// 페이지 로드 시 자동으로 슬라이드 이동 함수 호출
+document.addEventListener("DOMContentLoaded", function () {
+    autoSlide(); // 초기에 한 번 호출
+
+    // 1500밀리초(1.5초) 간격으로 슬라이드 전환을 위한 setInterval
+    setInterval(autoSlide, 2500);
+});
+
+// 방향을 고려하는 autoSlide 함수로 수정
+function autoSlide() {
+    plusSlides(slideDirection);
+    // 만약 현재 슬라이드 인덱스가 마지막 슬라이드이면 방향을 반대로 바꿈
+    if (slideIndex === document.getElementsByClassName("mySlides").length) {
+        slideDirection = -1;
+    }
+    // 만약 현재 슬라이드 인덱스가 첫 번째 슬라이드이면 방향을 다시 원래대로 바꿈
+    if (slideIndex === 1) {
+        slideDirection = 1;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+    });
+
+    calendar.render();
+});
+    </script>
+</body>
+
 </html>
