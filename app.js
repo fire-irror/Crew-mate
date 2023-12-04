@@ -41,6 +41,7 @@ app.post('/api/users/login', (req, res) => {
                     const user = rows[0];
                     if (user.password === password) {
                         res.json({ result: "로그인 성공" });
+                        alert("로그인 완료");
                     } else {
                         res.status(401).json({ result: "로그인 실패 (비밀번호 불일치)" });
                     }
