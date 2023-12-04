@@ -7,24 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const Id = document.getElementById('username');
         const Password = document.getElementById('password');
-        const Email = document.getElementById('email');
 
         let id = Id.value;
         let password = Password.value;
-        let email = Email.value;
 
         let userData = {
             user_name: id,
-            password: password,
-            email: email
+            password: password
         };
-        axios.post('http://localhost:3000/api/users/join', userData)
+
+        axios.post('http://localhost:3000/api/users/login', userData)
             .then(res => {
-                console.log('회원가입 성공:', res.data); 
+                console.log('로그인 성공:', res.data); 
             })
             .catch(error => {
-                console.error('회원가입 실패:', error); 
-        
+                console.error('로그인 실패:', error); 
             });
     });
 });
