@@ -34,8 +34,9 @@ header {
     height:auto;
 }
 .img-container{
-    margin-left: 30px;
+    margin-left: 90px;
 }
+
 .img-card{
     margin-left: 60px;
     width: 150px;
@@ -60,7 +61,15 @@ header {
     text-decoration: none;
     color: #333;
     background-color: #f1f1f1;
-    margin-left:83%;
+    margin-left:85%;
+}
+
+.fc-header-toolbar {
+    margin-top: 2vmin;
+}   
+
+#calendar {
+    margin-top: 20vmin;
 }
 
 .slideshow-container {
@@ -102,11 +111,10 @@ header {
 }
 
 #calendar {
-        width: 100%;
-        height: 700px; /* 원하는 높이로 조절하세요 */
-        /* padding-top: 5%;
-        padding-left: 5%; */
-    }
+    width: 90%;
+    height: 80REM; 
+    margin: auto;  
+}
 
     body, html {
         margin: 0;
